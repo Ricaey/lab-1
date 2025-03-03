@@ -1,12 +1,11 @@
-int recursive_sequential_search(int arr[],int low,int len,int target){
-    int index =0;
-    if(index>=len){//if so ,then it means target is not found
+int recursive_sequential_search(int arr[],int low,int high,int target){
+    if(low>high){//if so ,then it means target is not found
         return -1;//return -1 and then quit
     }else{
-        if(arr[index]==target){//if found
-            return index;//return the index
+        if(arr[low]==target){//if found
+            return low;//return the index
         }else{//if not found
-            return recursive_sequential_search(arr,index+1,len,target);//recursive call
+            return recursive_sequential_search(arr,low+1,high,target);//recursive call
         }
     }
 }

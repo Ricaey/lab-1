@@ -28,10 +28,17 @@ int main(){
     scanf("%d", &k);
     printf("Enter the target  you want: \n");
     scanf("%d", &target);
-    int a[l];
-    int i;
+    int a[l],i;
     for(i=0;i<l;i++){
         a[i]=i;
     }
-
+    printf("\nFor the worst case for iterative sequential search:\n");
+    test(iterative_sequential_search,a,0,l-1,k,target);
+    printf("\nFor the worst case for recursive sequential search:\n");
+    test(recursive_sequential_search,a,0,l-1,k,target);
+    printf("\nFor the worst case for iterative binary search:\n");
+    test(iterative_binary_search,a,0,l-1,k,target);
+    printf("\nFor the worst case for recursive binary search:\n");
+    test(recursive_binary_search,a,0,l-1,k,target);
+    return 0;
 }

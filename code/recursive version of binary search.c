@@ -1,6 +1,6 @@
-int recursive_binary_search(int arr[],int low,int len,int target)
+int recursive_binary_search(int arr[],int low,int high,int target)
 {
-    int mid,high=len-1;
+    int mid;
     if(low>high){//if low>high,then it means target is not found
         return -1;//quit
     }
