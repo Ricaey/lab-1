@@ -1,5 +1,4 @@
-int iterative_binary_search(int arr[],int len,int target){//use len to keep consistent with others
-    int low = 0;//initiate low
+int iterative_binary_search(int arr[],int low,int len,int target){//use len to keep consistent with others
     int high =len-1;//initiate high
     int mid;
     while(!(low>high)){
